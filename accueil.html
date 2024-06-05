@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mesure de Puissance en Temps Réel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styleaccueil.css">
+    <script src="https://kit.fontawesome.com/ccb7bbf37a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="accueil.html" title="Accueil">🏠</a></li>
+                <li><a href="state.html" title="état">⚡</a></li>
+                <li><a href="archive.html" title="archive">📁</a></li>
+                <li><a href="about.html" title="à propos">👷‍♂️</a></li>
+                <li><a href="index.html" title="Déconnexion">🔚</a></li>
+            </ul>
+        </div>
+        <img src="logolegrand.png" class="logo">
+    </header> 
+        <div id="nom">
+            <h1>Compteurs connectés Netatmo/Legrand</h1>
+            <h2>Vérification des Tokens</h2>
+        </div>
+    <div id="tokenDisplay">Waiting for token...</div>
+    <h2>Mesures de Puissance des compteurs</h2>
+    <div id="chartContainer">
+        <canvas id="powerChart"></canvas>
+        <div id="currentDate"></div>
+    </div>
+    <table id="powerTable">
+        <tr id="headerRow">
+            <th>Date et Heure</th>
+            <th>Compteur 14 (W)</th>
+            <th>Compteur 23 (W)</th>
+            <th>Compteur 24 (W)</th>
+            <th>Compteur 13 (W)</th>
+            <th>Compteur 17 (W)</th>
+            <th>Compteur 20 (W)</th>
+            <th>Compteur 18 (W)</th>
+            <th>Compteur 21 (W)</th>
+            <th>Compteur 15 (W)</th>
+            <th>Compteur 22 (W)</th>
+            <th>Compteur 19 (W)</th>
+            <th>Compteur 16 (W)</th>
+            <th>Consommation total</th>
+        </tr>
+        <tr id="valueRow">
+            <td id="timestamp">-</td>
+            <td id="power20">-</td>
+            <td id="power23">-</td>
+            <td id="power24">-</td>
+            <td id="power13">-</td>
+            <td id="power17">-</td>
+            <td id="power14">-</td>
+            <td id="power18">-</td>
+            <td id="power21">-</td>
+            <td id="power15">-</td>
+            <td id="power22">-</td>
+            <td id="power19">-</td>
+            <td id="power16">-</td>
+            <td id="consototal">-</td>
+        </tr>
+    </table>
+    <h2>Consommation totale</h2>
+    <div id="totalConsumptionDisplay">
+        Consommation Totale: <span id="totalConsumption">0</span> Watts
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
